@@ -67,19 +67,20 @@ h2{
 
 .slider-container {
     position: fixed;
-    bottom: 7%;
+    bottom: 0;
     width: 100%;
     overflow: hidden;
-    /* padding-left: 100%; */
+    padding-left: 100%;
     box-sizing: content-box;
 }
 
 .slider{
     display: inline-block;
-    animation: slide 15s linear infinite;
+    animation: slide 30s linear infinite;
     line-height: 10px;
     white-space: nowrap;
     box-sizing: content-box;
+    padding-right: 100%;
 }
 
 .slider-item {
@@ -89,12 +90,15 @@ h2{
 
 .line {
     border: 0.5px solid #484848;
-    width: 120vw;
+    width: 300px;
 }
 
 .news {
     font-family: 'MigraItalic-ExtraboldItalic';
-    font-size: 20px;
+    font-size: 20vh;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
 }
 
 /* .bg{
@@ -120,7 +124,7 @@ h2{
     }
   
     100% {
-      transform: translate3d(-60%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
     }
 }
   
