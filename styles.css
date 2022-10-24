@@ -96,6 +96,7 @@ h2{
 .news {
     font-family: 'MigraItalic-ExtraboldItalic';
     font-size: 20vh;
+    margin: 10vh 0;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 2px;
     color: transparent;
