@@ -1,1 +1,1 @@
-Make it simple, but significant
+Make it simple, but significant.
