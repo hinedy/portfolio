@@ -1,34 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="styles.css">
-        <title>Ahmed Hinedy</title>
-    </head>
-    <body>
-        <main>
-            <div class="wrapper">
-                <div class="container">
-                    <h1>Ahmed Hinedy</h1>
-                    <h2>Frontend Developer</h2>
-                </div>
-                <div class="container icons">
-                    <a href="https://github.com/hinedy" target="_blank"><img class="icon" src="icons/github.svg" alt="ahmedhinedy on github" ></a>
-                    <a href="https://www.linkedin.com/in/ahmedhinedy/" target="_blank"><img class="icon" src="icons\linkedin.svg" alt="ahmedhinedy on linkedin" ></a>
-                    <a href="https://www.behance.net/ahmedhinedy" target="_blank"><img class="icon" src="icons/behance.svg" alt="ahmedhinedy on behance" ></a>
-                    <a href="mailto:ahmedhinedy@gmail.com" target="_blank"><img class="icon" src="icons/mail.svg" alt="mail to ahmedhinedy" ></a>
-                </div>
-            </div>
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dopefolio</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <span class="header__logo-sub">Ahmed Hinedy</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
             
-            <div class="slider-container">
-                <div class="slider">
-                    <span class="slider-item line"></span>
-                    <p class="slider-item news">Under Construction</p>
-                    <span class="slider-item line"></span>
-                </div>
-                
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-welcome">Welcome to my <span class="heading-welcome_italic">Portfolio</span>, I'm</h1>
+        <h1 class="heading-primary"> Ahmed Hinedy</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            <span class="text-extra">Aesthetics-focused</span> <strong>Frontend Developer</strong> / <br/>
+             <strong>Creative Designer</strong> 
+             
+          </p>
+        </div>
+        <!-- <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">See my projects</a>
+        </div> -->
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/ahmedhinedy/" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="./assets/img/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/hinedy" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="./assets/img/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://www.behance.net/ahmedhinedy" class="home-hero__social-icon-link">
+            <img
+              src="./assets/svg/square-behance.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="mailto:ahmedhinedy@gmail.com" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="./assets/svg/envelope-solid.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a
+            href="https://drive.google.com/file/d/1lYtEDlb_vzcpNyzsSgroJZPcBb1BLGYw/view?usp=share_link"
+            target="_blank" class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
+          >
+            <img
+              src="./assets/svg/file-solid.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    
+    
+        <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+            All my projects include links to the code and live version. Click the button to learn more about each one.
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/quiz.jpg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
             </div>
-        </main>
-    </body>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Quiz App</h3>
+              <p class="projects__row-content-desc">
+                Quizzical is a simple quiz app that
+                 Gets five qustions from Open Trivia Database API 
+                 and gives you a score based on your answers. 
+                 It's built with functional React components. 
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/quizzical"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                <a
+                href="https://quizzical-hinedy.netlify.app/"
+                target="_blank"
+                class="btn btn--med btn--theme project-details__links-btn"
+                >Live Link
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/workbreak.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Work/Break Timer</h3>
+              <p class="projects__row-content-desc">
+                Improve productivity, Stay focused,
+                 and get things done using WorkBreak Timer.
+                 A Chrome extension using JavaScript 
+                 that enables you to set timers
+                  for Pomodoro-like cycles of
+                   work/break sessions.
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/WorkBreak-Timer"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/learning journal.jpg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Learning Journal</h3>
+              <p class="projects__row-content-desc">
+                A fully responsive three page blog using HTML/CSS. 
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/Learning-Journal"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                <a
+                href="https://hinedy.github.io/Learning-Journal/"
+                target="_blank"
+                class="btn btn--med btn--theme project-details__links-btn"
+                >Live Link
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/movies.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Movie Watchlist</h3>
+              <p class="projects__row-content-desc">
+                A movie watchlist app built using 
+                vanilla JavaScript, HTML, and CSS 
+                that uses OMDB API for movies data
+                 and Web Storage API for savng users data.
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/Movie-Watchlist"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                <a
+                href="https://hinedy.github.io/Movie-Watchlist/"
+                target="_blank"
+                class="btn btn--med btn--theme project-details__links-btn"
+                >Live Link
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/picsome-preview.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">PicSome</h3>
+              <p class="projects__row-content-desc">
+                A mock E-commerce site built using React.js with the ability to 
+                  Mark favorite Pictures, 
+                  Add pictures to cart, 
+                  Edit cart items before checkout, and Place order
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/PicSome"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                <a
+                href="https://picsome-hinedy.netlify.app/"
+                target="_blank"
+                class="btn btn--med btn--theme project-details__links-btn"
+                >Live Link
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/password-preview.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Password Generator</h3>
+              <p class="projects__row-content-desc">
+                An app that generates random passwords based on a few user inputs, 
+                e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript.
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/Password-Generator"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                <a
+                href="https://hinedy.github.io/Password-Generator/"
+                target="_blank"
+                class="btn btn--med btn--theme project-details__links-btn"
+                >Live Link
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/mobile-order(1).png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Mobile Ordering App</h3>
+              <p class="projects__row-content-desc">
+                Order from food menu with
+                 a checkout modal with compulsory inputs
+                  Built with HTML, CSS, and vanilla JavaScript.
+              </p>
+              <div>
+                <a
+                href="https://github.com/hinedy/mobile-ordering-app"
+                target="_blank"
+                class="btn btn--med btn--theme-inv dynamicBgClr"
+                >Learn more
+                </a>
+                <a
+                href="https://hinedy.github.io/mobile-ordering-app/"
+                target="_blank"
+                class="btn btn--med btn--theme project-details__links-btn"
+                >Live Link
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <h2>And <a 
+              href="https://github.com/hinedy/projects"
+              target="_blank"
+              class="more-link"
+              style="text-decoration: underline;"
+              >More</a>  </h2>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            <p>Aesthetics-focused Frontend Developer 
+              with an eye for detail and design
+               equipped with a unique engineering mindset
+               , and I love creating memorable and immersive digital user experiences
+            </p>
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                My background is in Graphic Design and Video Editing. I have a bachelors degree in Mechanical Engineering from Alexandria University. When I'm not coding, I'm propably cooking or watching an arthouse film.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">ES6+</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">Redux</div>
+              <div class="skills__skill">Git</div>
+              <div class="skills__skill">Bootstrap</div>
+              <div class="skills__skill">Python</div>
+              <div class="skills__skill">Flask</div>
+              <div class="skills__skill">Figma</div>
+              <div class="skills__skill">Adobe Photoshop</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Please reach out if you have any questions!
+             I'm happy to jump on a video call to brainstorm projects and ideas.
+              Send me an email at
+              <a target="_blank" rel="noreferrer" href="mailto:ahmedhinedy@gmail.com" style="text-decoration: underline;">
+                ahmedhinedy@gmail.com
+              </a>
+          </span>
+        </h2>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ahmedhinedy/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/img/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/hinedy">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/img/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.behance.net/ahmedhinedy">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/svg/square-behance.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:ahmedhinedy@gmail.com">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/svg/envelope-solid.svg"
+                  alt="icon"
+                />
+              </a>
+              
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Ahmed Hinedy</h4>
+            <p class="main-footer__short-desc">
+              Make it simple, but significant.
+            </p>
+          </div>
+        </div>
+
+        
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
