@@ -15,7 +15,7 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
 */
 @font-face {
   font-family: SilkSerif-Black;
-  src: url(/assets/fonts/SilkSerif-Black.woff2);
+  src: url(../assets/fonts/SilkSerif-Black.woff2);
 }
  @font-face {
   font-family: SilkSerif-Regular;
