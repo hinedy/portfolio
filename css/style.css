@@ -67,35 +67,28 @@ html {
       font-size: 65%; } }
 
 body {
-  
   box-sizing: border-box;
   position: relative;
   line-height: 1.5;
   font-family: 'Inter', serif;
   overflow-x: hidden;
   overflow-y: scroll;}
-
-
 a {
   text-decoration: none;
   color: inherit; }
 
 li {
   list-style: none; }
-
 input:focus,
 button:focus,
 a:focus,
 textarea:focus {
   outline: none; }
-
 button {
   border: none;
   cursor: pointer; }
-
 textarea {
   resize: none; }
-
 .heading-welcome{
   font-family: SilkSerif-ExtraLight, serif;
   margin-bottom: 0;
@@ -111,25 +104,21 @@ textarea {
   font-family: SilkSerif-Black, serif;
   margin-top: 0.2em;
   font-size: 9rem;
-  /* text-transform: uppercase; */
   letter-spacing: 0px;
   text-align: center; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
       font-size: 4.5rem; } }
-
 .heading-sec__mb-bg {
   margin-bottom: 11rem; }
   @media only screen and (max-width: 56.25em) {
     .heading-sec__mb-bg {
       margin-bottom: 8rem; } }
-
 .heading-sec__mb-med {
   margin-bottom: 9rem; }
   @media only screen and (max-width: 56.25em) {
     .heading-sec__mb-med {
       margin-bottom: 8rem; } }
-
 .heading-sec__main {
   display: block;
   font-size: 4rem;
@@ -237,15 +226,8 @@ textarea {
 
 .d-none {
   display: none; }
-
-/* rgba(var(--n-blue), 0.8)*/
-/* qwe */
 .home-hero {
   color: #000000;
-  /* background-color: #ffffff;
-  opacity: 1;
-  background-image: radial-gradient(#dcdcdc 1.5px, #ffffff 1.5px);
-  background-size: 30px 30px; */
   background-position: center;
   height: 100vh;
   min-height: 80rem;
