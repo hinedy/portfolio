@@ -27,7 +27,7 @@ export default async function Page() {
                 text={`${DATA.name}`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] md:text-xl text-pretty "
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />

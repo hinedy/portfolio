@@ -8,9 +8,9 @@ export const DATA = {
   location: "Alexandria, Egypt",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Aesthetics-focused and detail-oriented creative bringing a unique combination of analytical and creative skills to Frontend Development",
+    "Aesthetics-focused and detail-oriented creative bringing a unique combination of analytical thinking and design-centric approach to Frontend Development",
   summary:
-    " Proficient in using NextJs and React with TypeScript. Self-driven developer with a strong ownership mindset, dedicated to staying up to date with the latest industry trends and technologies, consistently delivering innovative solutions to complex problems.",
+    "Proficient in using NextJs and React with TypeScript. Self-driven developer with a strong ownership mindset, dedicated to staying up to date with the latest industry trends and technologies, consistently delivering innovative solutions to complex problems.",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
