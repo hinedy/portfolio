@@ -66,7 +66,7 @@ export default function Navbar() {
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>
-              <ModeToggle aria-label="Toggle Theme" />
+              <ModeToggle />
             </TooltipTrigger>
             <TooltipContent>
               <p>Theme</p>
