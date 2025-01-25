@@ -6,6 +6,7 @@ import { getBlogPosts } from "@/data/blog";
 import { Badge } from "@/components/ui/badge";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ResumeCard } from "@/components/resume-card";
+import { Testimonial } from "@/components/testimonial-card";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -15,11 +16,11 @@ export default async function Page() {
   const posts = await getBlogPosts();
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex min-h-[100dvh] flex-col space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+          <div className="flex justify-between gap-2">
+            <div className="flex flex-1 flex-col space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
@@ -27,7 +28,7 @@ export default async function Page() {
                 text={`${DATA.name}`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl text-pretty "
+                className="max-w-[600px] text-pretty md:text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
@@ -91,9 +92,31 @@ export default async function Page() {
           </div>
         </div>
       </section>
-      <section id="blog">
+      <section id="testimonials">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <h2 className="text-xl font-bold">Testimonials</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-1">
+            <div className="py-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+                {DATA.testimonials.map((testimonial, id) => (
+                  <BlurFade
+                    key={testimonial.name}
+                    delay={BLUR_FADE_DELAY * 11 + id * 0.05}
+                  >
+                    <Testimonial key={testimonial.name} {...testimonial} />{" "}
+                  </BlurFade>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <h2 className="text-xl font-bold">Articles</h2>
           </BlurFade>
           {posts
@@ -108,14 +131,14 @@ export default async function Page() {
             })
             .map((post, id) => (
               <BlurFade
-                delay={BLUR_FADE_DELAY * 11 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 13 + id * 0.05}
                 key={post.slug}
               >
                 <Link
-                  className="flex flex-col space-y-1 mb-4"
+                  className="mb-4 flex flex-col space-y-1"
                   href={`/blog/${post.slug}`}
                 >
-                  <div className="w-full flex flex-col">
+                  <div className="flex w-full flex-col">
                     <p className="tracking-tight">{post.metadata.title}</p>
                     <p className="h-6 text-xs text-muted-foreground">
                       {post.metadata.publishedAt}
@@ -128,10 +151,10 @@ export default async function Page() {
       </section>
 
       <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+        <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              <div className="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
                 Contact
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">

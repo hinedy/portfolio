@@ -16,11 +16,36 @@ export const DATA = {
     "React",
     "Next.js",
     "Typescript",
-    "Node.js",
     "Tailwind CSS",
+    "HTML",
+    "CSS",
+    "SASS",
+    "Redux",
+    "Node.js",
+    "Supabase",
     "git",
     "Figma",
     "Adobe Photoshop",
+  ],
+  testimonials: [
+    {
+      name: "Eliezer Valenzuela",
+      role: "Software Engineer",
+      company: "SophyTech LLC",
+      rating: 5,
+      image:
+        "https://media.licdn.com/dms/image/v2/D5603AQGcbDCQkw7OJg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709650744563?e=1743033600&v=beta&t=I2Gp7Mf9vyjuWG1ICh_8yx7MB6e6OfwilXMOft3BPr4",
+      testimonial:
+        "Ahmed is extremely knowledgeable rising talent. He has very good communication as well as UI/UX knowledge. He went above and beyond to deliver the task on time. Would highly recommend him and hire him again for any upcoming projects. I wish him best of luck for his future endeavors.",
+    },
+    {
+      name: "Jack Rayan",
+      role: "Upwork Client",
+      rating: 5,
+      image: "",
+      testimonial:
+        "I had a very good experience working with Ahmed, overall very professional, great communicator and fast!",
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
