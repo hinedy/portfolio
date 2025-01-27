@@ -16,6 +16,15 @@ interface TestimonialProps {
   className?: string;
 }
 
+const MAX_LINES = 4;
+
+const lineClampVariants = {
+  3: "line-clamp-3",
+  4: "line-clamp-4",
+  5: "line-clamp-5",
+  6: "line-clamp-6",
+};
+
 const Testimonial = ({
   name,
   role,
@@ -36,7 +45,7 @@ const Testimonial = ({
       const lineHeight = parseInt(
         window.getComputedStyle(textRef.current).lineHeight,
       );
-      const maxHeight = lineHeight * 4; // 5 lines
+      const maxHeight = lineHeight * MAX_LINES;
       const isOverflowing = textRef.current.scrollHeight > maxHeight;
       setShouldShowButton(isOverflowing);
 
@@ -56,7 +65,7 @@ const Testimonial = ({
         const lineHeight = parseInt(
           window.getComputedStyle(textRef.current).lineHeight,
         );
-        setContentHeight(`${lineHeight * 4}px`);
+        setContentHeight(`${lineHeight * MAX_LINES}px`);
       }
       setIsExpanded(!isExpanded);
     }
@@ -95,7 +104,7 @@ const Testimonial = ({
         <div className="flex-1">
           <div
             ref={contentRef}
-            className="overflow-hidden transition-all duration-300 ease-in-out"
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${lineClampVariants[MAX_LINES]}`}
             style={{ height: contentHeight }}
           >
             <p
