@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   openGraph: {
+    images: [{ url: `${DATA.url}${DATA.avatarUrl}` }],
     title: `${DATA.name}`,
     description: DATA.description,
     url: DATA.url,
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: `${DATA.url}${DATA.avatarUrl}`,
   },
   verification: {
     google: "",
