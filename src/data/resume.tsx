@@ -29,6 +29,15 @@ export const DATA = {
   ],
   testimonials: [
     {
+      name: "Simon Dobretsov",
+      role: "Chief Executive Officer",
+      company: "Accelerated Healthcare Solutions",
+      rating: 5,
+      image: "https://acceleratedhcs.com/images/Image-p-500.png",
+      testimonial:
+        "Ahmed was a critical member of a UI/UX design team for a major project being developed from the ground up in the healthcare space. His technical contributions were notable and his ability to work on a highly-dynamic and evolving project and team were even more noteworthy. Developers that produce good technical work and can function in a team environment with pressure from ever-changing client requirements are hard to find, and you will not go wrong with selecting Ahmed for any of your front end project needs. He produces timely and high quality work even in a higher pressure and time constrained environment.",
+    },
+    {
       name: "Eliezer Valenzuela",
       role: "Software Engineer",
       company: "SophyTech LLC",

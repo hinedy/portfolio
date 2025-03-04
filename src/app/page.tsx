@@ -122,9 +122,10 @@ export default async function Page() {
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             <div className="py-2">
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {DATA.testimonials.map((testimonial, id) => (
                   <BlurFade
+                    className={`col-span-1 ${testimonial.testimonial.length > 300 ? "sm:col-span-2" : "sm:col-span-1"}`}
                     key={testimonial.name}
                     delay={BLUR_FADE_DELAY * 14 + id * 0.05}
                   >
