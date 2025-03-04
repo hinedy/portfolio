@@ -78,14 +78,37 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="stack">
+      <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <p className="text-sm text-muted-foreground">
+              I&apos;ve contributed to the success of
+            </p>
+          </BlurFade>
+          <div className="flex flex-col flex-wrap items-center justify-center gap-x-12 gap-y-6 p-4 sm:flex-row">
+            {DATA.projects.map((project, id) => (
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+              >
+                <div className="cursor-pointer grayscale filter transition-all duration-300 ease-in-out hover:scale-110 hover:grayscale-[35%]">
+                  <Link href={project.url} target="_blank">
+                    {project.logo({})}
+                  </Link>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="stack">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <h2 className="text-xl font-bold">Tech Stack</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
@@ -94,7 +117,7 @@ export default async function Page() {
       </section>
       <section id="testimonials">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <h2 className="text-xl font-bold">Testimonials</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
@@ -103,7 +126,7 @@ export default async function Page() {
                 {DATA.testimonials.map((testimonial, id) => (
                   <BlurFade
                     key={testimonial.name}
-                    delay={BLUR_FADE_DELAY * 11 + id * 0.05}
+                    delay={BLUR_FADE_DELAY * 14 + id * 0.05}
                   >
                     <Testimonial key={testimonial.name} {...testimonial} />{" "}
                   </BlurFade>
@@ -116,7 +139,7 @@ export default async function Page() {
 
       <section id="blog">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <h2 className="text-xl font-bold">Articles</h2>
           </BlurFade>
           {posts
@@ -131,7 +154,7 @@ export default async function Page() {
             })
             .map((post, id) => (
               <BlurFade
-                delay={BLUR_FADE_DELAY * 13 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 16 + id * 0.05}
                 key={post.slug}
               >
                 <Link
@@ -152,7 +175,7 @@ export default async function Page() {
 
       <section id="contact">
         <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+          <BlurFade delay={BLUR_FADE_DELAY * 19}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
                 Contact

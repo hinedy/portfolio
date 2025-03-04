@@ -125,6 +125,27 @@ export const DATA = {
     },
   ],
   education: [],
-  projects: [],
+  projects: [
+    {
+      title: "MedX",
+      logo: Icons.medx,
+      url: "https://medxsvc.com",
+    },
+    {
+      title: "ShowZone",
+      logo: Icons.showzone,
+      url: "https://showzone.gg/",
+    },
+    {
+      title: "Stuf Storage",
+      logo: Icons.stuf,
+      url: "https://www.stufstorage.com/",
+    },
+    {
+      title: "AHS",
+      logo: Icons.ahs,
+      url: "https://acceleratedhcs.com/",
+    },
+  ],
   hackathons: [],
 } as const;
