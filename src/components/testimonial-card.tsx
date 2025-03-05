@@ -104,7 +104,7 @@ const Testimonial = ({
         <div className="flex-1">
           <div
             ref={contentRef}
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${lineClampVariants[MAX_LINES]}`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${!isExpanded && lineClampVariants[MAX_LINES]}`}
             style={{ height: contentHeight }}
           >
             <p
