@@ -71,6 +71,13 @@ export const DATA = {
 
         navbar: true,
       },
+      DEV: {
+        name: "DEV",
+        url: "https://dev.to/hinedy",
+        icon: Icons.dev,
+
+        navbar: true,
+      },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://linkedin.com/in/ahmedhinedy",
@@ -85,7 +92,6 @@ export const DATA = {
 
         navbar: true,
       },
-
       Email: {
         name: "Send Email",
         url: "mailto:ahmedhinedy@gmail.com",
