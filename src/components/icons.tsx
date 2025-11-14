@@ -10,7 +10,7 @@ export const Icons = {
   email: (props: IconProps) => <MailIcon {...props} />,
   medx: (props: IconProps) => <Medx {...props} />,
   ahs: (props: IconProps) => <Ahs {...props} />,
-  supplyTech: (props: IconProps) => <SupplyTech {...props} className="opacity-75 hover:opacity-100 transition-all duration-300"/>,
+  supplyTech: (props: IconProps) => <SupplyTech {...props} className=" hover:opacity-100 brightness-[5] opacity-75 transition-all duration-300"/>,
 
   dev: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" {...props}>
