@@ -142,14 +142,14 @@ export const DATA = {
   education: [],
   projects: [
     {
-      title: "MedX",
-      logo: Icons.medx,
-      url: "https://medxsvc.com",
-    },
-    {
       title: "ShowZone",
       logo: Icons.showzone,
       url: "https://showzone.gg/",
+    },
+    {
+      title: "SupplyTech",
+      logo: Icons.supplyTech,
+      url: "https://supplytechsyg.com/",
     },
     {
       title: "Stuf Storage",
@@ -160,6 +160,11 @@ export const DATA = {
       title: "AHS",
       logo: Icons.ahs,
       url: "https://acceleratedhcs.com/",
+    },
+    {
+      title: "MedX",
+      logo: Icons.medx,
+      url: "https://medxsvc.com",
     },
   ],
   hackathons: [],
