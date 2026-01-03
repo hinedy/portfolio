@@ -19,6 +19,29 @@ function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
 
+// Rehype plugin to add not-prose class to pre elements
+function rehypeAddNotProse() {
+  return (tree: any) => {
+    if (!tree.children) return;
+
+    function traverse(node: any) {
+      if (node.type === "element" && node.tagName === "pre") {
+        node.properties = node.properties || {};
+        const className = node.properties.className || [];
+        const classArray = Array.isArray(className) ? className : [className];
+        if (!classArray.includes("not-prose")) {
+          node.properties.className = [...classArray, "not-prose"];
+        }
+      }
+      if (node.children) {
+        node.children.forEach(traverse);
+      }
+    }
+
+    tree.children.forEach(traverse);
+  };
+}
+
 export async function markdownToHTML(markdown: string) {
   const p = await unified()
     .use(remarkParse)
@@ -27,11 +50,12 @@ export async function markdownToHTML(markdown: string) {
     .use(rehypePrettyCode, {
       // https://rehype-pretty.pages.dev/#usage
       theme: {
-        light: "min-light",
-        dark: "min-dark",
+        light: "github-light-default",
+        dark: "github-dark-default",
       },
       keepBackground: false,
     })
+    .use(rehypeAddNotProse)
     .use(rehypeStringify)
     .process(markdown);
 
