@@ -43,24 +43,27 @@ function rehypeAddNotProse() {
 }
 
 // Cache the processor to avoid creating multiple Shiki highlighter instances
-let cachedProcessor: ReturnType<typeof unified> | null = null;
+const createProcessor = () =>
+  unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypePrettyCode, {
+      // https://rehype-pretty.pages.dev/#usage
+      theme: {
+        light: "github-light-default",
+        dark: "github-dark-default",
+      },
+      keepBackground: false,
+    })
+    .use(rehypeAddNotProse)
+    .use(rehypeStringify);
+
+let cachedProcessor: ReturnType<typeof createProcessor> | null = null;
 
 function getProcessor() {
   if (!cachedProcessor) {
-    cachedProcessor = unified()
-      .use(remarkParse)
-      .use(remarkGfm)
-      .use(remarkRehype)
-      .use(rehypePrettyCode, {
-        // https://rehype-pretty.pages.dev/#usage
-        theme: {
-          light: "github-light-default",
-          dark: "github-dark-default",
-        },
-        keepBackground: false,
-      })
-      .use(rehypeAddNotProse)
-      .use(rehypeStringify);
+    cachedProcessor = createProcessor();
   }
   return cachedProcessor;
 }
