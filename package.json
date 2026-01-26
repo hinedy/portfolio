@@ -14,9 +14,6 @@
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.1",
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@react-three/drei": "^9.122.0",
-    "@react-three/fiber": "^8.18.0",
-    "@react-three/postprocessing": "^2.19.1",
     "@types/mdx": "^2.0.13",
     "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.0",
@@ -28,7 +25,6 @@
     "lucide-react": "^0.395.0",
     "next": "^14.2.35",
     "next-themes": "^0.3.0",
-    "postprocessing": "^6.38.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "^18",
     "react-dom": "^18",
@@ -41,7 +37,6 @@
     "shiki": "^1.7.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.159.0",
     "unified": "^11.0.4"
   },
   "devDependencies": {
