@@ -42,23 +42,32 @@ function rehypeAddNotProse() {
   };
 }
 
-export async function markdownToHTML(markdown: string) {
-  const p = await unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypePrettyCode, {
-      // https://rehype-pretty.pages.dev/#usage
-      theme: {
-        light: "github-light-default",
-        dark: "github-dark-default",
-      },
-      keepBackground: false,
-    })
-    .use(rehypeAddNotProse)
-    .use(rehypeStringify)
-    .process(markdown);
+// Cache the processor to avoid creating multiple Shiki highlighter instances
+let cachedProcessor: ReturnType<typeof unified> | null = null;
 
+function getProcessor() {
+  if (!cachedProcessor) {
+    cachedProcessor = unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkRehype)
+      .use(rehypePrettyCode, {
+        // https://rehype-pretty.pages.dev/#usage
+        theme: {
+          light: "github-light-default",
+          dark: "github-dark-default",
+        },
+        keepBackground: false,
+      })
+      .use(rehypeAddNotProse)
+      .use(rehypeStringify);
+  }
+  return cachedProcessor;
+}
+
+export async function markdownToHTML(markdown: string) {
+  const processor = getProcessor();
+  const p = await processor.process(markdown);
   return p.toString();
 }
 

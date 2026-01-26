@@ -9,6 +9,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Testimonial } from "@/components/testimonial-card";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ExpandableCard } from "@/components/expandable-card";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -96,6 +97,36 @@ export default async function Page() {
                     {project.logo({})}
                   </Link>
                 </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="featured-projects">
+        <div className="flex flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <h2 className="text-xl font-bold">Featured Projects</h2>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {DATA.featuredProjects.map((project, id) => (
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 13 + id * 0.05}
+              >
+                <ExpandableCard
+                  title={project.title}
+                  src={project.image}
+                  description={project.summary}
+                >
+                  <div className="flex flex-col gap-4">
+                    <p className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+                      {project.subtitle}
+                    </p>
+                    <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+                      {project.content}
+                    </Markdown>
+                  </div>
+                </ExpandableCard>
               </BlurFade>
             ))}
           </div>
