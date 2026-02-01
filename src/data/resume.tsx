@@ -148,6 +148,11 @@ export const DATA = {
       url: "https://showzone.gg/",
     },
     {
+      title: "nWeave",
+      logo: Icons.nweave,
+      url: "https://nweave.com/",
+    },
+    {
       title: "SupplyTech",
       logo: Icons.supplyTech,
       url: "https://supplytechsyg.com/",
